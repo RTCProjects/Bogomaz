@@ -24,7 +24,57 @@ void CAN_Interrupt1() interrupt 0x55	//222 прерывание(прием)
 	{
 		case 0x04:	//задание параметра
 		{
-			
+			switch(index)
+			{
+				case 0x93: //поправочный коэфициент
+				{
+					hexValueL = (CAN_Message_16[3].MODATAHL);
+					hexValueH = (CAN_Message_16[3].MODATAHH);
+					
+					pFactor =  (uint16*)&MainSettings.fFactor[subindex];
+					
+					*(pFactor) = hexValueL;
+					*(pFactor + 1) = hexValueH;
+					
+					canData[0] = command;
+					canData[1] = index;
+					canData[2] = 0x00;
+					canData[3] = subindex;
+					canData[4] =  (uint8)(hexValueL & 0x00FF);
+					canData[5] =  (uint8)((hexValueL >> 8) & 0x00FF);
+					canData[6] =  (uint8)(hexValueH & 0x00FF);
+					canData[7] =  (uint8)((hexValueH >> 8) & 0x00FF);
+					
+					CAN_LoadData(0,canData);
+					CAN_SendMessage(0);
+					
+				}break;
+				
+				case 0xE0:	//запись во FLASH
+				{
+					hexValueL = (CAN_Message_16[3].MODATAHL);
+					hexValueH = (CAN_Message_16[3].MODATAHH);
+					
+					if(subindex == 0x00){
+						SETTINGS_Default();
+					}
+					if(subindex == 0xFF){
+						SETTINGS_Save();
+					}
+					
+					canData[0] = command;
+					canData[1] = index;
+					canData[2] = 0x00;
+					canData[3] = subindex;
+					canData[4] =  (uint8)(hexValueL & 0x00FF);
+					canData[5] =  (uint8)((hexValueL >> 8) & 0x00FF);
+					canData[6] =  (uint8)(hexValueH & 0x00FF);
+					canData[7] =  (uint8)((hexValueH >> 8) & 0x00FF);
+					
+					CAN_LoadData(0,canData);
+					CAN_SendMessage(0);
+				}break;
+			}
 		}break;
 		
 		case 0x05:	//получение параметра
