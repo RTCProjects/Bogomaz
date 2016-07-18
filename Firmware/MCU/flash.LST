@@ -1,4 +1,4 @@
-C166 COMPILER V7.53.0.0, FLASH                                                             07/18/2016 16:07:47 PAGE 1   
+C166 COMPILER V7.53.0.0, FLASH                                                             07/18/2016 17:14:27 PAGE 1   
 
 
 C166 COMPILER V7.53.0.0, COMPILATION OF MODULE FLASH
@@ -62,7 +62,7 @@ COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE flash.c BROWSE MOD167 DEBUG TABS(
    53  1        
    54  1        while(Register & 0x0001){
    55  2          Register = *FSR;
-C166 COMPILER V7.53.0.0, FLASH                                                             07/18/2016 16:07:47 PAGE 2   
+C166 COMPILER V7.53.0.0, FLASH                                                             07/18/2016 17:14:27 PAGE 2   
 
    56  2        }
    57  1      }

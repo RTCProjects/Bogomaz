@@ -5,7 +5,8 @@
 "asc0.obj",
 "can.obj",
 "settings.obj",
-"asm_exin.obj" 
+"asm_exin.obj",
+"algorithm.obj" 
 TO "firmware"
 
 IXREF 

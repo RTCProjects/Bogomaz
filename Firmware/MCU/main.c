@@ -4,6 +4,7 @@
 #include "exin.h"
 #include "settings.h"
 #include "asc0.h"
+#include "algorithm.h"
 
 sbit P3_P1 = P3^1;
 
@@ -22,7 +23,7 @@ T0 		- таймер 1 сек.
 */
 uint16	uCountersArray[12];
 
-
+const uint8 can_msg[] = {1,2,3,4,5,6,7,8};
 
 void main(void)
 {
@@ -43,7 +44,8 @@ void main(void)
 	
 	
 	T01CON = 0x0004;
-
+	T0REL = 0x0BDC;
+	
 	T0IC = 0x006A;
 	
 	T78CON = 0x0000;
@@ -71,9 +73,7 @@ void main(void)
 	IEN = 1;
 	
 	CAN_Init();
-	
 
-	
 	
 
 	/*
@@ -95,20 +95,7 @@ void main(void)
 }
 void _timer0(void) interrupt 0x20
 {
-	//P3_P1 =! P3_P1;
-		/*	
-	if(P3_P1 == 1)
-	{
-		CCM4 = 0;
-	}
-	else
-	{
-		CCM4 = 0x00F7;
-	}*/
-
-	P9_P7 =! P9_P7;
-	T0 = 0;	
-	
+		ALGORITHM_Timer1000msElapsed();
 }
 void _timer7(void) interrupt 0x3D	
 {
