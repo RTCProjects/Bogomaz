@@ -1,0 +1,154 @@
+C166 COMPILER V7.53.0.0, EXIN                                                              07/18/2016 12:21:32 PAGE 1   
+
+
+C166 COMPILER V7.53.0.0, COMPILATION OF MODULE EXIN
+OBJECT MODULE PLACED IN exin.OBJ
+COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE exin.c BROWSE MOD167 DEBUG TABS(2) 
+
+ stmt lvl     source
+
+    1         #include "exin.h"
+    2         
+    3         sbit P7_P4 = P7^4;
+    4         sbit P7_P6 = P7^6;
+    5         
+    6         sbit P2_P14 = P2^14;
+    7         sbit P2_P15 = P2^15;
+    8         
+    9         
+   10         //инициализация входов
+   11         void InitializationEXIN(void)
+   12         {
+   13  1        DP2 = 0x0000;
+   14  1        DP7 = 0x0000;
+   15  1        EXICON = 0xAAAA;
+   16  1        EXISEL1 = 0x5500;
+   17  1        /*
+   18  1        
+   19  1        CCM2 = 0x1113;
+   20  1        CCM3 = 0x1111;
+   21  1        
+   22  1        CCM7 = 0x0003;
+   23  1        
+   24  1      */
+   25  1        CC8IC = 0x0077;
+   26  1        CC9IC = 0x0077;
+   27  1        CC10IC = 0x0077;
+   28  1        CC11IC = 0x0077;
+   29  1        CC12IC = 0x0077;
+   30  1        CC13IC = 0x0077;
+   31  1        CC14IC = 0x0077;
+   32  1        CC15IC = 0x0077;
+   33  1        
+   34  1        CC28IC = 0x0077;
+   35  1        CC29IC = 0x0077;
+   36  1        CC30IC = 0x0077;
+   37  1        CC31IC = 0x0077;
+   38  1      }
+   39         
+   40         
+   41         
+   42         
+   43         //прерывания первой группы
+   44         /*void group1_1_in(void) interrupt CC8IC_VEC  //P2.8
+   45         {
+   46         
+   47           printf("1_1 P2.8\n");
+   48         }
+   49         */
+   50         void group1_2_in(void) interrupt CC9IC_VEC  //P2.9
+   51         {
+   52  1          uCountersArray[1]++;
+   53  1      }/*
+   54         
+   55         void group1_3_in(void) interrupt CC10IC_VEC //P2.10
+C166 COMPILER V7.53.0.0, EXIN                                                              07/18/2016 12:21:32 PAGE 2   
+
+   56         {
+   57           printf("1_3 P2.10\n");
+   58         }
+   59         
+   60         void group1_4_in(void) interrupt CC11IC_VEC //P2.11
+   61         {
+   62           printf("1_4 P2.11\n");
+   63         }
+   64         
+   65         void group1_5_in(void) interrupt CC12IC_VEC //P2.12
+   66         {
+   67           printf("1_5 P2.12\n");
+   68         }
+   69         
+   70         void group1_6_in(void) interrupt CC13IC_VEC //P2.13
+   71         {
+   72           printf("1_6 P2.13\n");
+   73         }
+   74         
+   75         //прерывания второй группы
+   76         void group2_1_in(void) interrupt CC14IC_VEC //P2.14
+   77         {
+   78           printf("2_1 P 2.14\n");
+   79         }
+   80         
+   81         void group2_2_in(void) interrupt CC15IC_VEC //P2.15
+   82         {
+   83           
+   84             if(P2_P15 == 1)
+   85             {
+   86               printf("2_2 P2.15\n");
+   87               return;
+   88             }
+   89             if(P7_P4 == 1)
+   90             {
+   91               printf("2_3 P7.4\n");
+   92               return;
+   93             }
+   94             if(P7_P6 == 1)
+   95             {
+   96               printf("2_6 P7.6\n");
+   97               return;
+   98             }
+   99         
+  100         }
+  101         
+  102         void group2_3_in(void) interrupt CC28IC_VEC //P7.4
+  103         {
+  104           printf("2_3 P7.4\n");
+  105         }
+  106         
+  107         void group2_4_in(void) interrupt CC29IC_VEC //P7.5
+  108         {
+  109           printf("2_4 P7.5\n");
+  110         }
+  111         
+  112         void group2_5_in(void) interrupt CC30IC_VEC //P7.6
+  113         {
+  114           printf("2_5 P7.6\n");
+  115         }
+  116         
+  117         void group2_6_in(void) interrupt CC31IC_VEC //P7.7
+C166 COMPILER V7.53.0.0, EXIN                                                              07/18/2016 12:21:32 PAGE 3   
+
+  118         {
+  119           printf("2_6 P7.7\n");
+  120         }*/
+
+
+MODULE INFORMATION:   INITIALIZED  UNINITIALIZED
+  CODE SIZE        =          76     --------
+  NEAR-CONST SIZE  =    --------     --------
+  FAR-CONST SIZE   =    --------     --------
+  HUGE-CONST SIZE  =    --------     --------
+  XHUGE-CONST SIZE =    --------     --------
+  NEAR-DATA SIZE   =    --------     --------
+  FAR-DATA SIZE    =    --------     --------
+  XHUGE-DATA SIZE  =    --------     --------
+  IDATA-DATA SIZE  =    --------     --------
+  SDATA-DATA SIZE  =    --------     --------
+  BDATA-DATA SIZE  =    --------     --------
+  HUGE-DATA SIZE   =    --------     --------
+  BIT SIZE         =    --------     --------
+  INIT'L SIZE      =    --------     --------
+END OF MODULE INFORMATION.
+
+
+C166 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

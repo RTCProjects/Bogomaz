@@ -1,0 +1,151 @@
+C166 COMPILER V7.53.0.0, CAN                                                               07/18/2016 12:21:32 PAGE 1   
+
+
+C166 COMPILER V7.53.0.0, COMPILATION OF MODULE CAN
+OBJECT MODULE PLACED IN can.OBJ
+COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE can.c BROWSE MOD167 DEBUG TABS(2) 
+
+ stmt lvl     source
+
+    1         #include "can.h"
+    2         
+    3         void CAN_Init()
+    4         {
+    5  1        DP4 &= 0x00CF;          // P4.4 P4.5 настраиваем на ввод(вход CAN узла 0 и узла 
+             -1)
+    6  1        ALTSEL0P4 &= 0x00DF;          // Выключить альтернативную функцию P4.5(для
+             - P4.4 ничего не делаем)
+    7  1        DP4 |= 0x00C0;          // P4.6 P4.7 настраиваем на передачу(Выход CAN узла 0 �
+             -� узла 1)
+    8  1        ALTSEL0P4 |= 0x00C0;          // Включить альтернативные функции P4.6 и P4.7
+    9  1      
+   10  1        CAN_IC0 = 0x005C;
+   11  1        CAN_IC1 = 0x0060; 
+   12  1        CAN_IC2 = 0x0074; 
+   13  1        
+   14  1        NCR0  = 0x0041;   //разрешаем вносить изменения в конфигурацию
+   15  1        NPCR0 = 0x0000;   //Выбрали P4.5 для приема в CAN узел 0
+   16  1        NBTR0 = 0x2341;   //скорость узла 500kb/sec при тактировании 16Мгц
+   17  1        NCR0  = 0x0000;   //Запрет после реконфигурации
+   18  1        
+   19  1        CAN_Message_16[0].MOCTRH = 0x0E08;
+   20  1        CAN_Message_16[0].MOCTRL = 0x0000;
+   21  1        CAN_Message_16[0].MOIPRL = 0x0000;  /*выбор линии прерываний для передачи -
+             - 0*/
+   22  1        CAN_Message_16[0].MOFCRH = 0x0800; // DLC = 8, запретить прерывание на переда
+             -чу 
+   23  1        
+   24  1        CAN_Message_16[1].MOCTRH = 0x0080;
+   25  1        CAN_Message_16[1].MOCTRL = 0x0000;
+   26  1        CAN_Message_16[1].MOIPRL = 0x0000;  // выбор линии прерываний по приему - 0
+   27  1        CAN_Message_16[1].MOFCRH = 0x0801;  //разрешить прерываение на прием
+   28  1        
+   29  1        CAN_Message_16[2].MOCTRH = 0x0080;
+   30  1        CAN_Message_16[2].MOCTRL = 0x0000;
+   31  1        CAN_Message_16[2].MOIPRL = 0x0002;  // выбор линии прерываний по приему - 2
+   32  1        CAN_Message_16[2].MOFCRH = 0x0801;  //разрешить прерываение на прием
+   33  1      
+   34  1        CAN_Message_16[3].MOCTRH = 0x0E08;
+   35  1        CAN_Message_16[3].MOCTRL = 0x0000;
+   36  1        CAN_Message_16[3].MOIPRL = 0x0010;  // выбор линии прерываний для передачи
+             - - 1
+   37  1        CAN_Message_16[3].MOFCRH = 0x0802;  // разрешить прерывание на передачу
+   38  1        
+   39  1        CAN_Message_16[4].MOCTRH = 0x0E08;
+   40  1        CAN_Message_16[4].MOCTRL = 0x0000;
+   41  1        CAN_Message_16[4].MOIPRL = 0x0000;  // выбор линии прерываний для передачи
+             - 
+   42  1        CAN_Message_16[4].MOFCRH = 0x0800;  // DLC = 8, запрет прерываний 
+   43  1        
+   44  1        delay(10);
+   45  1        
+   46  1        CAN_Message_16[0].MOARH = 0x8000;  // идентификатор 000h
+   47  1        CAN_Message_16[0].MOAMRH = 0x3FFF; // маска идентификатора 
+   48  1          
+C166 COMPILER V7.53.0.0, CAN                                                               07/18/2016 12:21:32 PAGE 2   
+
+   49  1        CAN_Message_16[1].MOARH = 0x8400;  // идентификатор 100h
+   50  1        CAN_Message_16[1].MOAMRH = 0x3FFF; // маска идентификатора   
+   51  1        
+   52  1        CAN_Message_16[2].MOARH = 0x8404;  // идентификатор 101h
+   53  1        CAN_Message_16[2].MOAMRH = 0x3FFF; // маска идентификатора   
+   54  1        
+   55  1        CAN_Message_16[3].MOARH = 0x8804;  // идентификатор 201h
+   56  1        CAN_Message_16[3].MOAMRH = 0x3FFF; // маска идентификатора 
+   57  1        
+   58  1        CAN_Message_16[4].MOARH = 0x8004;  // идентификатор 001h
+   59  1        CAN_Message_16[4].MOAMRH = 0x3FFF; // маска идентификатора 
+   60  1      
+   61  1        delay(10);
+   62  1        
+   63  1        PANCTR_H = 0x0100;         // message object 0 -> List 1
+   64  1        PANCTR = 0x0002;           
+   65  1         _nop_(); _nop_(); _nop_(); _nop_(); _nop_(); _nop_();
+   66  1         
+   67  1        PANCTR_H = 0x0101;         // message object 1 -> List 1
+   68  1        PANCTR = 0x0002;             
+   69  1         _nop_(); _nop_(); _nop_(); _nop_(); _nop_(); _nop_(); 
+   70  1         
+   71  1         
+   72  1        PANCTR_H = 0x0102;         // message object 2 -> List 1
+   73  1        PANCTR = 0x0002;             
+   74  1         _nop_(); _nop_(); _nop_(); _nop_(); _nop_(); _nop_();   
+   75  1         
+   76  1        PANCTR_H = 0x0103;         // message object 3 -> List 1
+   77  1        PANCTR = 0x0002;             
+   78  1         _nop_(); _nop_(); _nop_(); _nop_(); _nop_(); _nop_();   
+   79  1      
+   80  1      
+   81  1        PANCTR_H = 0x0104;         // message object 4 -> List 1
+   82  1        PANCTR = 0x0002;             
+   83  1         _nop_(); _nop_(); _nop_(); _nop_(); _nop_(); _nop_();   
+   84  1      
+   85  1      
+   86  1        CAN_Message_16[0].MOCTRH = 0x0020; 
+   87  1        CAN_Message_16[0].MOCTRL = 0x0000;
+   88  1        
+   89  1        CAN_Message_16[1].MOCTRH = 0x0020; 
+   90  1        CAN_Message_16[1].MOCTRL = 0x0000;
+   91  1        
+   92  1        CAN_Message_16[2].MOCTRH = 0x0020; 
+   93  1        CAN_Message_16[2].MOCTRL = 0x0000;
+   94  1        
+   95  1        CAN_Message_16[3].MOCTRH = 0x0020; 
+   96  1        CAN_Message_16[3].MOCTRL = 0x0000;
+   97  1        
+   98  1        CAN_Message_16[4].MOCTRH = 0x0020; 
+   99  1        CAN_Message_16[4].MOCTRL = 0x0000;  
+  100  1        
+  101  1      }
+  102         void CAN_SendMessage(char *buffer)
+  103         {
+  104  1        CAN_Message_16[0].MODATALL = buffer[0];
+  105  1        CAN_Message_16[0].MODATALH = buffer[1];
+  106  1        CAN_Message_16[0].MODATAHL = buffer[2];
+  107  1        CAN_Message_16[0].MODATAHH = buffer[3];
+  108  1        
+  109  1        CAN_Message_16[0].MOCTRH = 0x0100;  
+  110  1      }
+C166 COMPILER V7.53.0.0, CAN                                                               07/18/2016 12:21:32 PAGE 3   
+
+
+
+MODULE INFORMATION:   INITIALIZED  UNINITIALIZED
+  CODE SIZE        =         590     --------
+  NEAR-CONST SIZE  =    --------     --------
+  FAR-CONST SIZE   =    --------     --------
+  HUGE-CONST SIZE  =    --------     --------
+  XHUGE-CONST SIZE =    --------     --------
+  NEAR-DATA SIZE   =    --------     --------
+  FAR-DATA SIZE    =    --------     --------
+  XHUGE-DATA SIZE  =    --------     --------
+  IDATA-DATA SIZE  =    --------     --------
+  SDATA-DATA SIZE  =    --------     --------
+  BDATA-DATA SIZE  =    --------     --------
+  HUGE-DATA SIZE   =    --------     --------
+  BIT SIZE         =    --------     --------
+  INIT'L SIZE      =    --------     --------
+END OF MODULE INFORMATION.
+
+
+C166 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
