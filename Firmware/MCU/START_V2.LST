@@ -1,4 +1,4 @@
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE     1
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE     1
 
 
 MACRO ASSEMBLER A166 V5.36.0.1
@@ -65,7 +65,7 @@ LOC      OBJ             LINE     SOURCE
  0002                      56     _BTYP0   EQU    2       ; 0 = 8 Bit Non Multiplexed
                            57     ;                       ; 1 = 8 Bit Multiplexed
                            58     ;                       ; 2 = 16 Bit Non Multiplexed
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE     2
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE     2
 
                            59     ;                       ; 3 = 16 Bit Multiplexed
                            60     ;
@@ -133,7 +133,7 @@ LOC      OBJ             LINE     SOURCE
  0000                     122     _WRCFG   EQU    0       ; 0 = Normal configuration of WR# and BHE#
                           123     ;                       ; 1 = WR# pin acts as WRL#, BHE# pin acts as WRH#
                           124     ;
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE     3
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE     3
 
                           125     ; CLKEN: System Clock Output Enable bit (SYSCON.8):
  0000                     126     _CLKEN  EQU     0       ; 0 = disabled    (Reset Value)
@@ -201,7 +201,7 @@ LOC      OBJ             LINE     SOURCE
                           188     $SET (DPPUSE = 1)
                           189     ;
                           190     ;------------------------------------------------------------------------------
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE     4
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE     4
 
                           191     ; Initialization for XPERCON register (available on some derivatives only
                           192     ;
@@ -269,7 +269,7 @@ LOC      OBJ             LINE     SOURCE
                           254     ;
                           255     ; --- SYSCON3 values: disable on-chip peripherals
                           256     ;
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE     5
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE     5
 
  0000                     257     ADCDIS  EQU     0       ; 1 = disable Analog/Digital Converter    (SYSCON3.0)
  0000                     258     ASC0DIS EQU     0       ; 1 = disable UART ASC0                   (SYSCON3.1)
@@ -337,7 +337,7 @@ LOC      OBJ             LINE     SOURCE
  0000                     320     _RDY_AS1 EQU    0       ; 0 = synchronous READY# input
                           321     ;                       ; 1 = asynchronous READY# input
                           322     ;
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE     6
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE     6
 
                           323     ; CSREN1: Read Chip Select Enable bit (BUSCON1.14):
  0000                     324     _CSREN1  EQU    0       ; 0 = CS1# is independent of read command (RD#)
@@ -405,7 +405,7 @@ LOC      OBJ             LINE     SOURCE
                           386     $SET (BUSCON3 = 0)
                           387     ;
                           388     ; Define the start address and the address range of Chip Select 3 (CS3#) 
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE     7
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE     7
 
                           389     ; This values are used to set the ADDRSEL3 register
                           390          ; Set CS3# Start Address (default 300000H)
@@ -473,7 +473,7 @@ LOC      OBJ             LINE     SOURCE
                           452     ;
                           453     ; MTTC4: Memory Tri-state Time (BUSCON4.5):
  0001                     454     _MTTC4   EQU    1       ; 0 = Delay Time     0.5 States
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE     8
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE     8
 
                           455     ;                       ; 1 = No Delay Time  0   States
                           456     ;
@@ -541,7 +541,7 @@ LOC      OBJ             LINE     SOURCE
                           518     $ENDIF
                                   $IF (STK_SIZE = 7)
                                   _STKSZ          SET     7
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE     9
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE     9
 
                           521     $ENDIF
                           522     
@@ -609,7 +609,7 @@ LOC      OBJ             LINE     SOURCE
  FE14                     584     STKOV    DEFR   0FE14H
  FE16                     585     STKUN    DEFR   0FE16H
  FFC4                     586     P3       DEFR   0FFC4H
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    10
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    10
 
  FFC6                     587     DP3      DEFR   0FFC6H
  FF14                     588     BUSCON1  DEFR   0FF14H
@@ -677,7 +677,7 @@ LOC      OBJ             LINE     SOURCE
                                   $IF (BTYP_ENABLE == 1)
                                   BCON0L          SET     BCON0L OR (_BTYP0 << 6)
                                   BCON0H          SET     BCON0H OR (_BUSACT0 << 2)
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    11
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    11
 
                           653     $ENDIF
                           654     
@@ -745,7 +745,7 @@ LOC      OBJ             LINE     SOURCE
  0004                     716     SYS_L           SET     _XPERSHARE OR (_VISIBLE << 1) OR (_XPEN << 2)
  0004                     717     SYS_L           SET     SYS_L OR (_BDRSTEN << 3)
  0004                     718     SYS_L           SET     SYS_L OR (_PWDCFG << 5) OR (_CSCFG << 6)
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    12
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    12
 
                                   $IF (WRCFG_ENABLE == 1)
                                   SYS_L           SET     SYS_L OR (_WRCFG << 7)
@@ -813,7 +813,7 @@ LOC      OBJ             LINE     SOURCE
                           782     
                                   $IF (BUSCON2 = 1)
                                   BCON2           SET     (_MTTC2 << 5) OR (_RWDC2 << 4)
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    13
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    13
 
                                   BCON2           SET     BCON2 OR ((NOT _MCTC2) AND 0FH)
                                   BCON2           SET     BCON2 AND (NOT (_RDYEN2 << 3))
@@ -881,7 +881,7 @@ LOC      OBJ             LINE     SOURCE
                           848     
                                   $IF (BUSCON4 = 1)
                                   BCON4           SET     (_MTTC4 << 5) OR (_RWDC4 << 4)
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    14
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    14
 
                                   BCON4           SET     BCON4 OR ((NOT _MCTC4) AND 0FH)
                                   BCON4           SET     BCON4 AND (NOT (_RDYEN4 << 3))
@@ -949,7 +949,7 @@ LOC      OBJ             LINE     SOURCE
                           914     
                           915     
                           916     ;------------------------------------------------------------------------------
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    15
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    15
 
                           917     ;
                           918     ; The following code is necessary to set RAM variables to 0 at start-up
@@ -1017,7 +1017,7 @@ LOC      OBJ             LINE     SOURCE
                                                   MOV     R3,R2
                                                   EXTS    R9,#1
                                                   MOV     R4,[R8+]
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    16
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    16
 
                                                   JBC     R2.14,ClearNear
                                                   JBC     R2.15,ClearFar
@@ -1085,7 +1085,7 @@ LOC      OBJ             LINE     SOURCE
                                                   MOV     R2,[R8+]
                                                   JMPR    cc_Z,EndInit
                                                   JBC     R2.15,InitBit
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    17
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    17
 
                                                   MOV     R4,R2
                                                   AND     R2,#3FFFH
@@ -1153,7 +1153,7 @@ LOC      OBJ             LINE     SOURCE
                                                   ADD     R8,#2
                                                   ADDC    R9,#0
                                   CopyInitVal:    EXTS    R9,#1
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    18
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    18
 
                                                   MOVB    RL5,[R8]
                                                   ADD     R8,#1
@@ -1210,7 +1210,7 @@ LOC      OBJ             LINE     SOURCE
                          1167     $ENDIF
                          1168     
                          1169                     END
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    19
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    19
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -1278,7 +1278,7 @@ STKOV. . . . . . .  WORD   FE14H             A  SFR
 STKUN. . . . . . .  WORD   FE16H             A  SFR
 SYSCON . . . . . .  WORD   FF12H             A  SFR
 SYSCON2. . . . . .  WORD   F1D0H             A  ESFR
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    20
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    20
 
 SYSCON3. . . . . .  WORD   F1D4H             A  ESFR
 SYS_BITS . . . . .  DATA16 FF6FH             A  
@@ -1346,7 +1346,7 @@ _RDY_AS0 . . . . .  DATA3  0H                A
 _RDY_AS1 . . . . .  DATA3  0H                A  
 _RDY_AS2 . . . . .  DATA3  0H                A  
 _RDY_AS3 . . . . .  DATA3  0H                A  
-A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 12:21:32 PAGE    21
+A166 MACRO ASSEMBLER  START_V2                                                            07/18/2016 16:07:46 PAGE    21
 
 _RDY_AS4 . . . . .  DATA3  0H                A  
 _ROMEN . . . . . .  DATA3  1H                A  

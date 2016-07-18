@@ -37,8 +37,6 @@ void main(void)
 	SETTINGS_Init();
 
 
-	memset(uCountersArray,0,sizeof(uCountersArray));
-	
 	DP9 = 0x00B3;
 	P9 = 0x0000;
 	
@@ -74,16 +72,10 @@ void main(void)
 	
 	CAN_Init();
 	
-	
-	
-	CAN_SendMessage(0);
-	
-	
-	FLASH_EraseSector(0x030000);
-	FLASH_FSRControl();
 
 	
 	
+
 	/*
 		for(i = 0;i<10;i+=2)
 		{

@@ -1,4 +1,4 @@
-C166 COMPILER V7.53.0.0, EXIN                                                              07/18/2016 12:21:32 PAGE 1   
+C166 COMPILER V7.53.0.0, EXIN                                                              07/18/2016 16:07:47 PAGE 1   
 
 
 C166 COMPILER V7.53.0.0, COMPILATION OF MODULE EXIN
@@ -62,7 +62,7 @@ COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE exin.c BROWSE MOD167 DEBUG TABS(2
    53  1      }/*
    54         
    55         void group1_3_in(void) interrupt CC10IC_VEC //P2.10
-C166 COMPILER V7.53.0.0, EXIN                                                              07/18/2016 12:21:32 PAGE 2   
+C166 COMPILER V7.53.0.0, EXIN                                                              07/18/2016 16:07:47 PAGE 2   
 
    56         {
    57           printf("1_3 P2.10\n");
@@ -126,7 +126,7 @@ COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE exin.c BROWSE MOD167 DEBUG TABS(2
   115         }
   116         
   117         void group2_6_in(void) interrupt CC31IC_VEC //P7.7
-C166 COMPILER V7.53.0.0, EXIN                                                              07/18/2016 12:21:32 PAGE 3   
+C166 COMPILER V7.53.0.0, EXIN                                                              07/18/2016 16:07:47 PAGE 3   
 
   118         {
   119           printf("2_6 P7.7\n");

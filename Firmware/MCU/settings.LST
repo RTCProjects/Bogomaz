@@ -1,4 +1,4 @@
-C166 COMPILER V7.53.0.0, SETTINGS                                                          07/18/2016 12:21:32 PAGE 1   
+C166 COMPILER V7.53.0.0, SETTINGS                                                          07/18/2016 16:07:47 PAGE 1   
 
 
 C166 COMPILER V7.53.0.0, COMPILATION OF MODULE SETTINGS
@@ -62,7 +62,7 @@ COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE settings.c BROWSE MOD167 DEBUG TA
    53  2          FLASH_FSRControl();
    54  2          
    55  2      
-C166 COMPILER V7.53.0.0, SETTINGS                                                          07/18/2016 12:21:32 PAGE 2   
+C166 COMPILER V7.53.0.0, SETTINGS                                                          07/18/2016 16:07:47 PAGE 2   
 
    56  2          addr_counter++;
    57  2        }
