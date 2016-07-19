@@ -1,4 +1,4 @@
-C166 COMPILER V7.53.0.0, FLASH                                                             07/18/2016 17:14:27 PAGE 1   
+C166 COMPILER V7.53.0.0, FLASH                                                             07/19/2016 10:55:32 PAGE 1   
 
 
 C166 COMPILER V7.53.0.0, COMPILATION OF MODULE FLASH
@@ -18,59 +18,73 @@ COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE flash.c BROWSE MOD167 DEBUG TABS(
     9  1        
    10  1          *Command_1 = 0xAA00;
    11  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   12  1          *Command_2 = 0x0055;
-   13  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   14  1          *Command_1 = 0x8000;
-   15  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   16  1          *Command_1 = 0xAA00;
-   17  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   18  1          *Command_2 = 0x0055;
+   12  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   13  1        
+   14  1          *Command_2 = 0x0055;
+   15  1        _nop_ (); _nop_ (); _nop_ (); _nop_ ();
+   16  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   17  1          
+   18  1          *Command_1 = 0x8000;
    19  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   20  1          *Command_sector = 0x0030;
-   21  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   22  1      }
-   23         
-   24         void FLASH_WriteWord(unsigned long address,unsigned int word)
-   25         {
-   26  1          unsigned int far *Command_1 = (unsigned int far *) 0x080554;
-   27  1          unsigned int far *Command_2 = (unsigned int far *) 0x080AAA;
-   28  1        
-   29  1          unsigned int far *Command_sector = (unsigned int far *)address;
-   30  1        
-   31  1          *Command_1 = 0xAA00;
-   32  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   33  1        
-   34  1          *Command_2 = 0x0055;
-   35  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   36  1        
-   37  1          *Command_1 = 0xA000;
-   38  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   39  1        
-   40  1          *Command_sector = word;
-   41  1      
-   42  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   43  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   44  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   45  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-   46  1          _nop_ (); _nop_ (); _nop_ (); _nop_ ();
+   20  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   21  1        
+   22  1          *Command_1 = 0xAA00;
+   23  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   24  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   25  1        
+   26  1          *Command_2 = 0x0055;
+   27  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   28  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   29  1        
+   30  1          *Command_sector = 0x0030;
+   31  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   32  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   33  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   34  1        _nop_ (); _nop_ (); _nop_ (); _nop_ ();
+   35  1        _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   36  1      }
+   37         
+   38         void FLASH_WriteWord(unsigned long address,unsigned int word)
+   39         {
+   40  1          unsigned int far *Command_1 = (unsigned int far *) 0x080554;
+   41  1          unsigned int far *Command_2 = (unsigned int far *) 0x080AAA;
+   42  1        
+   43  1          unsigned int far *Command_sector = (unsigned int far *)address;
+   44  1        
+   45  1          *Command_1 = 0xAA00;
+   46  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
    47  1        
-   48  1      }
-   49         void FLASH_FSRControl()
-   50         {
-   51  1        volatile unsigned int far *FSR = (unsigned int far *) 0x08F000;
-   52  1        volatile unsigned int Register = *FSR;
+   48  1          *Command_2 = 0x0055;
+   49  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   50  1        
+   51  1          *Command_1 = 0xA000;
+   52  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
    53  1        
-   54  1        while(Register & 0x0001){
-   55  2          Register = *FSR;
-C166 COMPILER V7.53.0.0, FLASH                                                             07/18/2016 17:14:27 PAGE 2   
+   54  1          *Command_sector = word;
+   55  1      
+C166 COMPILER V7.53.0.0, FLASH                                                             07/19/2016 10:55:32 PAGE 2   
 
-   56  2        }
-   57  1      }
-   58         
+   56  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   57  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   58  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   59  1          _nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+   60  1          _nop_ (); _nop_ (); _nop_ (); _nop_ ();
+   61  1        
+   62  1      }
+   63         void FLASH_FSRControl()
+   64         {
+   65  1        volatile unsigned int far *FSR = (unsigned int far *) 0x08F000;
+   66  1        volatile unsigned int Register = *FSR;
+   67  1        
+   68  1        while(Register & 0x0001){
+   69  2          Register = *FSR;
+   70  2        }
+   71  1      }
+   72         
 
 
 MODULE INFORMATION:   INITIALIZED  UNINITIALIZED
-  CODE SIZE        =         310     --------
+  CODE SIZE        =         382     --------
   NEAR-CONST SIZE  =    --------     --------
   FAR-CONST SIZE   =    --------     --------
   HUGE-CONST SIZE  =    --------     --------

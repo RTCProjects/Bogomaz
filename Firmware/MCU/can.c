@@ -57,6 +57,7 @@ void CAN_Interrupt1() interrupt 0x55	//222 прерывание(прием)
 					
 					if(subindex == 0x00){
 						SETTINGS_Default();
+						SETTINGS_Save();
 					}
 					if(subindex == 0xFF){
 						SETTINGS_Save();

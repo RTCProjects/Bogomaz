@@ -1,4 +1,4 @@
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE     1
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE     1
 
 
 MACRO ASSEMBLER A166 V5.36.0.1
@@ -65,7 +65,7 @@ LOC      OBJ             LINE     SOURCE
  F160                 +1   56     CC16IC   DEFR   0F160H
  FE62                 +1   57     CC17     DEFR   0FE62H
  F162                 +1   58     CC17IC   DEFR   0F162H
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE     2
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE     2
 
  FE64                 +1   59     CC18     DEFR   0FE64H
  F164                 +1   60     CC18IC   DEFR   0F164H
@@ -133,7 +133,7 @@ LOC      OBJ             LINE     SOURCE
  FF84.6               +1  122     CC6IE    BIT    CC6IC.6
  FF86.7               +1  123     CC7IR    BIT    CC7IC.7
  FF86.6               +1  124     CC7IE    BIT    CC7IC.6
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE     3
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE     3
 
  FF88.7               +1  125     CC8IR    BIT    CC8IC.7
  FF88.6               +1  126     CC8IE    BIT    CC8IC.6
@@ -201,7 +201,7 @@ LOC      OBJ             LINE     SOURCE
  FF58.15              +1  188     ACC15    BIT    CCM3.15
  FF22.3               +1  189     ACC16    BIT    CCM4.3
  FF22.7               +1  190     ACC17    BIT    CCM4.7
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE     4
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE     4
 
  FF22.11              +1  191     ACC18    BIT    CCM4.11
  FF22.15              +1  192     ACC19    BIT    CCM4.15
@@ -269,7 +269,7 @@ LOC      OBJ             LINE     SOURCE
  FF10.5               +1  254     MULIP    BIT    PSW.5
  FF10.6               +1  255     USR0     BIT    PSW.6
  FF10.10              +1  256     HLDEN    BIT    PSW.10
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE     5
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE     5
 
  FF10.11              +1  257     IEN      BIT    PSW.11
  FF0C.4               +1  258     RWDC0    BIT    BUSCON0.4
@@ -337,7 +337,7 @@ LOC      OBJ             LINE     SOURCE
  F100                 +1  320     DP0L     DEFR   0F100H
  F102                 +1  321     DP0H     DEFR   0F102H
  F104                 +1  322     DP1L     DEFR   0F104H
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE     6
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE     6
 
  F106                 +1  323     DP1H     DEFR   0F106H
  FFC2                 +1  324     DP2      DEFR   0FFC2H
@@ -405,7 +405,7 @@ LOC      OBJ             LINE     SOURCE
  FFB2.4               +1  386     SSC0HB    BIT   SSC0CON.4
  FFB2.5               +1  387     SSC0PH    BIT   SSC0CON.5
  FFB2.6               +1  388     SSC0P0    BIT   SSC0CON.6
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE     7
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE     7
 
  FFB2.8               +1  389     SSC0TE    BIT   SSC0CON.8
  FFB2.8               +1  390     SSC0TEN   BIT   SSC0CON.8
@@ -473,7 +473,7 @@ LOC      OBJ             LINE     SOURCE
  FF66.7               +1  452     T5IR     BIT    T5IC.7
  FF48.6               +1  453     T6R      BIT    T6CON.6
  FF48.7               +1  454     T6UD     BIT    T6CON.7
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE     8
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE     8
 
  FF48.8               +1  455     T6UDE    BIT    T6CON.8
  FF48.9               +1  456     T6OE     BIT    T6CON.9
@@ -541,7 +541,7 @@ LOC      OBJ             LINE     SOURCE
  FF32.12              +1  518     PB01     BIT    PWMCON1.12
  FF32.14              +1  519     PS2      BIT    PWMCON1.14
  FF32.15              +1  520     PS3      BIT    PWMCON1.15
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE     9
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE     9
 
  F17E.7               +1  521     PWMIR    BIT    PWMIC.7
  F17E.6               +1  522     PWMIE    BIT    PWMIC.6
@@ -609,7 +609,7 @@ LOC      OBJ             LINE     SOURCE
  F084                 +1  584     POCON1L             EQU                  0F084H
  F086                 +1  585     POCON1H             EQU                  0F086H
  F088                 +1  586     POCON2             EQU                  0F088H
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    10
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    10
 
  F08A                 +1  587     POCON3             EQU                  0F08AH
  F08C                 +1  588     POCON4             EQU                  0F08CH
@@ -677,7 +677,7 @@ LOC      OBJ             LINE     SOURCE
  FF5E.9               +1  650     SSC1RE    BIT   SSC1CON.9
  FF5E.9               +1  651     SSC1REN   BIT   SSC1CON.9
  FF5E.10              +1  652     SSC1PE    BIT   SSC1CON.10
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    11
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    11
 
  FF5E.10              +1  653     SSC1PEN   BIT   SSC1CON.10
  FF5E.11              +1  654     SSC1BE    BIT   SSC1CON.11
@@ -745,7 +745,7 @@ LOC      OBJ             LINE     SOURCE
  E8D8                 +1  716     CCU6_IEN          EQU      0E8D8H
                       +1  717     
  F190                 +1  718     CCU6_T12IC        EQU      0F190H
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    12
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    12
 
  F198                 +1  719     CCU6_T13IC        EQU      0F198H
  F188                 +1  720     CCU6_EIC          EQU      0F188H
@@ -813,25 +813,25 @@ LOC      OBJ             LINE     SOURCE
                           782     ASSUME  DPP1 : NCODE          ; DPP1 addresses the NCODE group
                           783     ASSUME  DPP2 : NDATA          ; DPP2 addresses the NDATA  group
                           784     ASSUME  DPP3 : SYSTEM         ; DPP3 addresses the SYSTEM page
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    13
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    13
 
                           785     
 --------                  786     OPS     SECTION  CODE 'NCODE'
                           787             
-                          788             GROUP1_1 PROC INTERRUPT EXIN1 = 0x18
-00000000 C60820FD         789                     SCXT    CP,#0FD20H
-00000004 CC00             790                     NOP
-                          791                             
-                          792                     
-                          793                             
-00000006 FC08             794                     POP     CP      
-00000008 FB88             795                     RETI
-                          796             GROUP1_1 ENDP
+                          788             ;GROUP1_1 PROC INTERRUPT EXIN1 = 0x18
+                          789             ;       SCXT    CP,#0FD20H
+                          790             ;       NOP
+                          791             ;               
+                          792             ;       
+                          793             ;               
+                          794             ;       POP     CP      
+                          795             ;       RETI
+                          796             ;GROUP1_1 ENDP
                           797             
 --------                  798     OPS     ENDS
                           799      
                           800     END
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    14
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    14
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -899,7 +899,7 @@ ALTSEL0P1H . . . .  DATA16 F1ECH             A
 ALTSEL0P1L . . . .  DATA16 F1EAH             A  
 ALTSEL0P2. . . . .  DATA16 F1EEH             A  
 ALTSEL0P3. . . . .  DATA16 F1F0H             A  
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    15
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    15
 
 ALTSEL0P4. . . . .  DATA16 F1F4H             A  
 ALTSEL0P6. . . . .  DATA16 F1F6H             A  
@@ -967,7 +967,7 @@ CC18 . . . . . . .  WORD   FE64H             A  SFR
 CC18IC . . . . . .  WORD   F164H             A  ESFR
 CC18IE . . . . . .  BIT    F164H.6           A  
 CC18IR . . . . . .  BIT    F164H.7           A  
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    16
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    16
 
 CC19 . . . . . . .  WORD   FE66H             A  SFR
 CC19IC . . . . . .  WORD   F166H             A  ESFR
@@ -1035,7 +1035,7 @@ CC2_SEM. . . . . .  WORD   FE28H             A  SFR
 CC3. . . . . . . .  WORD   FE86H             A  SFR
 CC30 . . . . . . .  WORD   FE7CH             A  SFR
 CC30IC . . . . . .  WORD   F18CH             A  ESFR
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    17
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    17
 
 CC30IE . . . . . .  BIT    F18CH.6           A  
 CC30IR . . . . . .  BIT    F18CH.7           A  
@@ -1103,7 +1103,7 @@ CCU6_PSLR. . . . .  DATA16 E8C4H             A
 CCU6_T12 . . . . .  DATA16 E890H             A  
 CCU6_T12DTC. . . .  DATA16 E894H             A  
 CCU6_T12IC . . . .  DATA16 F190H             A  
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    18
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    18
 
 CCU6_T12MSEL . . .  DATA16 E8C6H             A  
 CCU6_T12PR . . . .  DATA16 E892H             A  
@@ -1116,7 +1116,6 @@ CCU6_TCTR4 . . . .  DATA16 E8A6H             A
 CCU6_TRPCTR. . . .  DATA16 E8C2H             A  
 CLKEN. . . . . . .  BIT    FF12H.8           A  
 CLKLOCK. . . . . .  BIT    F1D0H.15          A  
-CP . . . . . . . .  WORD   FE10H             A  SFR
 CRIC . . . . . . .  WORD   FF6AH             A  SFR
 CRIE . . . . . . .  BIT    FF6AH.6           A  
 CRIR . . . . . . .  BIT    FF6AH.7           A  
@@ -1153,14 +1152,12 @@ DTIDR. . . . . . .  DATA16 F0D8H             A
 DTREVT . . . . . .  DATA16 F0F0H             A  
 E. . . . . . . . .  BIT    FF10H.4           A  
 EXICON . . . . . .  WORD   F1C0H             A  ESFR
-EXIN1. . . . . . .  INTNO  0018H             A  GLB 
 EXISEL0. . . . . .  DATA16 F1DAH             A  
 EXISEL1. . . . . .  DATA16 F1D8H             A  
 FMDIS. . . . . . .  BIT    F1D4H.5           A  
 FOCON. . . . . . .  DATA16 FFAAH             A  
 GPT1DIS. . . . . .  BIT    F1D4H.3           A  
 GPT2DIS. . . . . .  BIT    F1D4H.4           A  
-GROUP1_1 . . . . .  I-FAR  0H                R  SEC=OPS
 HLDEN. . . . . . .  BIT    FF10H.10          A  
 I2CDIS . . . . . .  BIT    F1D4H.11          A  
 I2C_CFG. . . . . .  DATA16 F0EAH             A  
@@ -1171,11 +1168,11 @@ I2C_SMBCTL2. . . .  DATA16 F0E4H             A
 I2C_SMBCTL3. . . .  DATA16 F0E8H             A  
 I2C_SMBSDA . . . .  DATA16 F0DAH             A  
 I2C_SMBST. . . . .  DATA16 F0DCH             A  
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    19
-
 I2C_SMBTOPR. . . .  DATA16 F0E6H             A  
 IEN. . . . . . . .  BIT    FF10H.11          A  
 ILLBUS . . . . . .  BIT    FFACH.0           A  
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    19
+
 ILLINA . . . . . .  BIT    FFACH.1           A  
 ILLOPA . . . . . .  BIT    FFACH.2           A  
 IRQ24IC. . . . . .  DATA16 FF88H             A  
@@ -1239,11 +1236,11 @@ PIE2 . . . . . . .  BIT    FF30H.10          A
 PIE3 . . . . . . .  BIT    FF30H.11          A  
 PIR0 . . . . . . .  BIT    FF30H.12          A  
 PIR1 . . . . . . .  BIT    FF30H.13          A  
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    20
-
 PIR2 . . . . . . .  BIT    FF30H.14          A  
 PIR3 . . . . . . .  BIT    FF30H.15          A  
 PLLIE. . . . . . .  BIT    F1DEH.2           A  
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    20
+
 PLLIR. . . . . . .  BIT    F1DEH.3           A  
 PM0. . . . . . . .  BIT    FF32H.4           A  
 PM1. . . . . . . .  BIT    FF32H.5           A  
@@ -1307,11 +1304,11 @@ RTCCMP3_LO . . . .  DATA16 F04CH             A
 RTCCST . . . . . .  DATA16 F030H             A  
 RTCEIST. . . . . .  DATA16 F034H             A  
 RTCIE. . . . . . .  BIT    F1DEH.0           A  
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    21
-
 RTCIEN . . . . . .  DATA16 F036H             A  
 RTCIR. . . . . . .  BIT    F1DEH.1           A  
 RTCLD_HI . . . . .  DATA16 F03EH             A  
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    21
+
 RTCLD_LO . . . . .  DATA16 F040H             A  
 RTCRD_HI . . . . .  DATA16 F03AH             A  
 RTCRD_LO . . . . .  DATA16 F03CH             A  
@@ -1375,11 +1372,11 @@ S1RIR. . . . . . .  BIT    F18AH.7           A
 S1STP. . . . . . .  BIT    F1B8H.3           A  
 S1TBIC . . . . . .  DATA16 F13CH             A  
 S1TBIE . . . . . .  BIT    F13CH.6           A  
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    22
-
 S1TBIR . . . . . .  BIT    F13CH.7           A  
 S1TBUF . . . . . .  DATA16 FEA6H             A  
 S1TIC. . . . . . .  DATA16 F182H             A  
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    22
+
 S1TIE. . . . . . .  BIT    F182H.6           A  
 S1TIR. . . . . . .  BIT    F182H.7           A  
 SCS. . . . . . . .  BIT    F1D0H.7           A  
@@ -1443,11 +1440,11 @@ SSCDIS . . . . . .  BIT    F1D4H.2           A
 STKOF. . . . . . .  BIT    FFACH.14          A  
 STKOV. . . . . . .  WORD   FE14H             A  SFR
 STKUF. . . . . . .  BIT    FFACH.13          A  
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    23
-
 STKUN. . . . . . .  WORD   FE16H             A  SFR
 SYSCON . . . . . .  WORD   FF12H             A  SFR
 SYSCON2. . . . . .  WORD   F1D0H             A  ESFR
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    23
+
 SYSCON3. . . . . .  WORD   F1D4H             A  ESFR
 T0 . . . . . . . .  WORD   FE50H             A  SFR
 T01CON . . . . . .  WORD   FF50H             A  SFR
@@ -1511,11 +1508,11 @@ T5SC . . . . . . .  BIT    FF46H.15          A
 T5UD . . . . . . .  BIT    FF46H.7           A  
 T5UDE. . . . . . .  BIT    FF46H.8           A  
 T6 . . . . . . . .  WORD   FE48H             A  SFR
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    24
-
 T6CON. . . . . . .  WORD   FF48H             A  SFR
 T6IC . . . . . . .  WORD   FF68H             A  SFR
 T6IE . . . . . . .  BIT    FF68H.6           A  
+A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/19/2016 10:47:25 PAGE    24
+
 T6IN . . . . . . .  BIT    FFA2H.12          A  
 T6IR . . . . . . .  BIT    FF68H.7           A  
 T6OE . . . . . . .  BIT    FF48H.9           A  
@@ -1580,5 +1577,3 @@ ZEROS. . . . . . .  WORD   FF1CH             A  SFR
 
 
 ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
-A166 MACRO ASSEMBLER  ASM_EXIN                                                            07/18/2016 17:14:27 PAGE    25
-

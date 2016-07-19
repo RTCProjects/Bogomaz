@@ -46,11 +46,11 @@ void InitializationEXIN(void)
 
 	printf("1_1 P2.8\n");
 }
-*/
+
 void group1_2_in(void) interrupt CC9IC_VEC	//P2.9
 {
 		uCountersArray[1]++;
-}/*
+}
 
 void group1_3_in(void) interrupt CC10IC_VEC	//P2.10
 {

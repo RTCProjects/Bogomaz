@@ -1,4 +1,4 @@
-C166 COMPILER V7.53.0.0, MAIN                                                              07/18/2016 17:14:27 PAGE 1   
+C166 COMPILER V7.53.0.0, MAIN                                                              07/19/2016 10:43:36 PAGE 1   
 
 
 C166 COMPILER V7.53.0.0, COMPILATION OF MODULE MAIN
@@ -62,7 +62,7 @@ COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE main.c BROWSE MOD167 DEBUG TABS(2
    53  1        T8IC = 0x006C;
    54  1        
    55  1        CC16IC = 0x0075;
-C166 COMPILER V7.53.0.0, MAIN                                                              07/18/2016 17:14:27 PAGE 2   
+C166 COMPILER V7.53.0.0, MAIN                                                              07/19/2016 10:43:36 PAGE 2   
 
    56  1        CC20IC = 0x0076;
    57  1      
@@ -126,7 +126,7 @@ COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE main.c BROWSE MOD167 DEBUG TABS(2
   113  1        
   114  1        P9_P1 = 0;  //выключаем нижний ключ
   115  1        P9_P0 = 1;  //включаем верхний ключ
-C166 COMPILER V7.53.0.0, MAIN                                                              07/18/2016 17:14:27 PAGE 3   
+C166 COMPILER V7.53.0.0, MAIN                                                              07/19/2016 10:43:36 PAGE 3   
 
   116  1        
   117  1      

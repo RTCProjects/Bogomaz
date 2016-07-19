@@ -9,15 +9,29 @@ void FLASH_EraseSector(unsigned long sector)
 	
 		*Command_1 = 0xAA00;
 	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
-		*Command_2 = 0x0055;
 	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+	
+		*Command_2 = 0x0055;
+	_nop_ (); _nop_ (); _nop_ (); _nop_ ();
+	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+		
 		*Command_1 = 0x8000;
 	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+	
 		*Command_1 = 0xAA00;
 	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+	
 		*Command_2 = 0x0055;
 	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+	
 		*Command_sector = 0x0030;
+	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
+	_nop_ (); _nop_ (); _nop_ (); _nop_ ();
 	_nop_ (); _nop_ (); _nop_ (); _nop_ (); 
 }
 
